@@ -217,7 +217,7 @@
             border-left: 4px solid #8b5cf6;
             padding: 30px;
             border-radius: 12px;
-            margin: 20px 0;
+            margin: 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             border: 2px solid #e5e7eb;
             border-left: 4px solid #8b5cf6;
@@ -232,26 +232,32 @@
         
         .commitment-box h4 {
             color: #7c3aed;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 700;
-            font-size: 1.4em;
+            font-size: 1.2em;
+        }
+        
+        .commitment-box p {
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 10px;
         }
         
         .checkbox-list {
             list-style: none;
-            margin-top: 15px;
+            margin-top: 10px;
         }
         
         .checkbox-list li {
-            padding: 12px 15px;
-            margin: 8px 0;
+            padding: 8px 12px;
+            margin: 5px 0;
             background: #f8fafc;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             border: 1px solid #e5e7eb;
         }
         
@@ -467,7 +473,7 @@
             <button class="tab-btn active" onclick="switchTab('core-principles')">Core Principles</button>
             <button class="tab-btn" onclick="switchTab('framework')">My Decision Framework</button>
             <button class="tab-btn" onclick="switchTab('situations')">Real Scenarios</button>
-            <button class="tab-btn" onclick="switchTab('commitments')">My Commitments</button>
+            <button class="tab-btn" onclick="switchTab('commitments')">My Commitment</button>
             <button class="tab-btn" onclick="switchTab('defining-moments')">Memorable Quotes from Class</button>
         </div>
         
@@ -748,67 +754,109 @@
         
 
         <div id="commitments" class="content-section">
-            <div class="commitment-box">
-                <h4>🎯 My 30-Day Influence Commitments</h4>
-                <p>These are binding commitments I'm making to my future self, applying course concepts:</p>
-                <ul class="checkbox-list">
-                    <li>
-                        <input type="checkbox" id="commit1">
-                        <label for="commit1">Spend 30 minutes preparing stakeholder incentives before every major meeting (Situational Awareness)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit2">
-                        <label for="commit2">Include 1 data point or external benchmark in every major recommendation (Expert Power - AOC, JSK)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit3">
-                        <label for="commit3">Contribute at least 1 thoughtful question or insight in every senior leadership meeting (Expert Power, Legitimacy, Matt Jacobson - Ioniq)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit4">
-                        <label for="commit4">Schedule 3 one-on-one coffee chats with key stakeholders each month (Relationships - Cain)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit5">
-                        <label for="commit5">Help 2 colleagues per week without being asked (Legitimacy, Referent Power - De Mello)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit6">
-                        <label for="commit6">Frame every proposal in terms of business impact, risk reduction, or ROI (Framing - JSK)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit7">
-                        <label for="commit7">Ask stakeholders for input before finalizing decisions that affect them (Participation builds legitimacy - De Mello)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit8">
-                        <label for="commit8">Pause and identify top 3 decision-makers before trying to influence outcomes (Situational Awareness - Professor Massey)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit9">
-                        <label for="commit9">Share one useful insight, resource, or analysis with my team each week (Expert Power, Credibility)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="commit10">
-                        <label for="commit10">Observe and listen more than I speak in new environments for the first 2 weeks (Legitimacy, Situational Awareness)</label>
-                    </li>
-                </ul>
-            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px; align-items: stretch;">
+                <!-- Left Column: Commitments -->
+                <div class="commitment-box">
+                    <h4>🎯 My 30-Day Influence Checklist</h4>
+                    <p>These are binding commitments I'm making to my future self, applying course concepts:</p>
+                    <ul class="checkbox-list">
+                        <li>
+                            <input type="checkbox" id="commit1">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">1.</span>
+                            <label for="commit1">Spend 30 minutes preparing stakeholder incentives before every major meeting (Situational Awareness)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit2">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">2.</span>
+                            <label for="commit2">Include 1 data point or external benchmark in every major recommendation (Expert Power - AOC, JSK)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit3">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">3.</span>
+                            <label for="commit3">Contribute at least 1 thoughtful question or insight in every senior leadership meeting (Expert Power, Legitimacy, Matt Jacobson - Ioniq)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit4">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">4.</span>
+                            <label for="commit4">Schedule 3 one-on-one coffee chats with key stakeholders each month (Relationships - Cain)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit5">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">5.</span>
+                            <label for="commit5">Help 2 colleagues per week without being asked (Legitimacy, Referent Power - De Mello)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit6">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">6.</span>
+                            <label for="commit6">Frame every proposal in terms of business impact, risk reduction, or ROI (Framing - JSK)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit7">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">7.</span>
+                            <label for="commit7">Ask stakeholders for input before finalizing decisions that affect them (Participation builds legitimacy - De Mello)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit8">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">8.</span>
+                            <label for="commit8">Pause and identify top 3 decision-makers before trying to influence outcomes (Situational Awareness - Professor Massey)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit9">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">9.</span>
+                            <label for="commit9">Share one useful insight, resource, or analysis with my team each week (Expert Power, Credibility)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="commit10">
+                            <span style="color: #7c3aed; font-weight: 600; margin-right: 8px;">10.</span>
+                            <label for="commit10">Observe and listen more than I speak in new environments for the first 2 weeks (Legitimacy, Situational Awareness)</label>
+                        </li>
+                    </ul>
+                </div>
             
-            <div class="dashboard-stats">
-                <div class="stat-card" style="position: relative;">
-                    <div style="position: absolute; top: -8px; left: 50%; transform: translateX(-50%); width: 40px; height: 18px; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 4px 4px 0 0; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.1);"></div>
-                    <div class="stat-label" style="margin-top: 15px;">Expert Power & Credibility</div>
+                <!-- Right Column: Monthly Accountability Calendar -->
+                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(148, 163, 184, 0.15); border-left: 4px solid #8b5cf6;">
+                <h4 style="color: #7c3aed; margin-bottom: 8px; font-size: 1.2em; font-weight: 700;">📅 Monthly Accountability Tracker</h4>
+                <p style="color: #64748b; margin-bottom: 15px; line-height: 1.5; font-size: 0.9em;">Add items from the checklist so they show up here</p>
+                
+                <!-- Month Selector -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 12px; background: #f8fafc; border-radius: 8px;">
+                    <button onclick="changeMonth(-1)" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9em;">← Previous</button>
+                    <span id="currentMonth" style="font-size: 1.05em; font-weight: 600; color: #1e293b;"></span>
+                    <button onclick="changeMonth(1)" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9em;">Next →</button>
                 </div>
-                <div class="stat-card" style="position: relative;">
-                    <div style="position: absolute; top: -8px; left: 50%; transform: translateX(-50%); width: 40px; height: 18px; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 4px 4px 0 0; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.1);"></div>
-                    <div class="stat-label" style="margin-top: 15px;">Relationships & Coalitions</div>
+                
+                <!-- Calendar Grid -->
+                <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-bottom: 15px;">
+                    <div style="text-align: center; font-weight: 600; color: #64748b; padding: 8px; font-size: 0.85em;">Sun</div>
+                    <div style="text-align: center; font-weight: 600; color: #64748b; padding: 8px; font-size: 0.85em;">Mon</div>
+                    <div style="text-align: center; font-weight: 600; color: #64748b; padding: 8px; font-size: 0.85em;">Tue</div>
+                    <div style="text-align: center; font-weight: 600; color: #64748b; padding: 8px; font-size: 0.85em;">Wed</div>
+                    <div style="text-align: center; font-weight: 600; color: #64748b; padding: 8px; font-size: 0.85em;">Thu</div>
+                    <div style="text-align: center; font-weight: 600; color: #64748b; padding: 8px; font-size: 0.85em;">Fri</div>
+                    <div style="text-align: center; font-weight: 600; color: #64748b; padding: 8px; font-size: 0.85em;">Sat</div>
                 </div>
-                <div class="stat-card" style="position: relative;">
-                    <div style="position: absolute; top: -8px; left: 50%; transform: translateX(-50%); width: 40px; height: 18px; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 4px 4px 0 0; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.1);"></div>
-                    <div class="stat-label" style="margin-top: 15px;">Situational Awareness</div>
+                
+                <div id="calendarDays" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-bottom: 20px;"></div>
+                
+                <!-- Monthly Stats -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px;">
+                    <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 18px; border-radius: 8px; text-align: center; color: white;">
+                        <div style="font-size: 1.8em; font-weight: 700;" id="monthlyTotal">0</div>
+                        <div style="font-size: 0.85em; opacity: 0.9;">Total This Month</div>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #14b8a6 0%, #10b981 100%); padding: 18px; border-radius: 8px; text-align: center; color: white;">
+                        <div style="font-size: 1.8em; font-weight: 700;" id="monthlyRate">0%</div>
+                        <div style="font-size: 0.85em; opacity: 0.9;">Completion Rate</div>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); padding: 18px; border-radius: 8px; text-align: center; color: white;">
+                        <div style="font-size: 1.8em; font-weight: 700;" id="bestDay">-</div>
+                        <div style="font-size: 0.85em; opacity: 0.9;">Best Day</div>
+                    </div>
                 </div>
+                
             </div>
+            </div>
+
         </div>
 
         <div id="defining-moments" class="content-section">
@@ -928,11 +976,199 @@
                 checkbox.checked = true;
             }
             
-            // Save on change
+            // Save on change and update today's calendar count
             checkbox.addEventListener('change', function() {
                 localStorage.setItem(this.id, this.checked);
+                updateTodayCalendarCount();
+                if (typeof updateMonthlyStats === 'function') {
+                    updateMonthlyStats(); // Update stats when checkbox changes
+                }
             });
         });
+        
+        // Function to update today's calendar count based on checked items
+        function updateTodayCalendarCount() {
+            const today = new Date();
+            const todayKey = formatDate(today);
+            
+            // Get which checkboxes are checked and their numbers
+            const checkboxes = document.querySelectorAll('.checkbox-list input[type="checkbox"]');
+            let checkedItems = [];
+            
+            checkboxes.forEach((cb, index) => {
+                if (cb.checked) {
+                    checkedItems.push(index + 1); // Store item numbers (1-10)
+                }
+            });
+            
+            // Update today's calendar count and item list
+            localStorage.setItem(`calendar-${todayKey}`, checkedItems.length);
+            localStorage.setItem(`calendar-items-${todayKey}`, JSON.stringify(checkedItems));
+            
+            // Re-render calendar to show updated count
+            if (typeof renderCalendar === 'function') {
+                renderCalendar();
+            }
+        }
+        
+        // Calendar Functionality
+        let currentMonthOffset = 0;
+        
+        function changeMonth(offset) {
+            currentMonthOffset += offset;
+            renderCalendar();
+        }
+        
+        function getMonthDates(offset) {
+            const today = new Date();
+            const targetDate = new Date(today.getFullYear(), today.getMonth() + offset, 1);
+            
+            const year = targetDate.getFullYear();
+            const month = targetDate.getMonth();
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            
+            const dates = [];
+            
+            // Add empty cells for days before month starts
+            const startDay = firstDay.getDay();
+            for (let i = 0; i < startDay; i++) {
+                dates.push(null);
+            }
+            
+            // Add all days in month
+            for (let day = 1; day <= lastDay.getDate(); day++) {
+                dates.push(new Date(year, month, day));
+            }
+            
+            return { dates, month: targetDate };
+        }
+        
+        function formatDate(date) {
+            return date.toISOString().split('T')[0];
+        }
+        
+        function renderCalendar() {
+            const { dates, month } = getMonthDates(currentMonthOffset);
+            const calendarDays = document.getElementById('calendarDays');
+            const currentMonthSpan = document.getElementById('currentMonth');
+            
+            // Update month display
+            currentMonthSpan.textContent = month.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            
+            // Clear and render days
+            calendarDays.innerHTML = '';
+            dates.forEach(date => {
+                const dayDiv = document.createElement('div');
+                
+                if (date === null) {
+                    // Empty cell for days before month starts
+                    dayDiv.style.cssText = 'background: transparent; border: none;';
+                    calendarDays.appendChild(dayDiv);
+                    return;
+                }
+                
+                const dateKey = formatDate(date);
+                const completedCount = localStorage.getItem(`calendar-${dateKey}`) || 0;
+                const checkedItems = JSON.parse(localStorage.getItem(`calendar-items-${dateKey}`) || '[]');
+                const isToday = formatDate(new Date()) === dateKey;
+                
+                // Create tooltip text showing which items were checked
+                const tooltipText = checkedItems.length > 0 
+                    ? `Items completed: ${checkedItems.map(n => '#' + n).join(', ')}`
+                    : 'No items completed';
+                
+                dayDiv.style.cssText = `
+                    padding: 12px 8px;
+                    background: ${isToday ? 'linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%)' : '#f8fafc'};
+                    border: 2px solid ${isToday ? '#3b82f6' : '#e2e8f0'};
+                    border-radius: 6px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    min-height: 70px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                `;
+                
+                dayDiv.title = tooltipText;
+                
+                dayDiv.innerHTML = `
+                    <div style="font-weight: 600; color: #1e293b; margin-bottom: 3px; font-size: 0.9em;">${date.getDate()}</div>
+                    <div style="font-size: 1.4em; font-weight: 700; color: ${completedCount > 0 ? '#10b981' : '#cbd5e1'};">${completedCount}</div>
+                `;
+                
+                dayDiv.onclick = () => openDayModal(date);
+                dayDiv.onmouseenter = () => {
+                    dayDiv.style.transform = 'translateY(-2px)';
+                    dayDiv.style.boxShadow = '0 4px 12px rgba(59, 130, 246, 0.3)';
+                };
+                dayDiv.onmouseleave = () => {
+                    dayDiv.style.transform = 'translateY(0)';
+                    dayDiv.style.boxShadow = 'none';
+                };
+                
+                calendarDays.appendChild(dayDiv);
+            });
+            
+            updateMonthlyStats();
+        }
+        
+        function openDayModal(date) {
+            const dateKey = formatDate(date);
+            const currentCount = parseInt(localStorage.getItem(`calendar-${dateKey}`) || 0);
+            
+            const count = prompt(`How many commitments did you complete on ${date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}?`, currentCount);
+            
+            if (count !== null) {
+                const validCount = Math.max(0, Math.min(10, parseInt(count) || 0));
+                localStorage.setItem(`calendar-${dateKey}`, validCount);
+                renderCalendar();
+            }
+        }
+        
+        function updateMonthlyStats() {
+            const { dates } = getMonthDates(currentMonthOffset);
+            let total = 0;
+            let bestDayCount = 0;
+            let bestDayDate = null;
+            let daysInMonth = 0;
+            
+            dates.forEach(date => {
+                if (date === null) return;
+                daysInMonth++;
+                
+                const dateKey = formatDate(date);
+                const count = parseInt(localStorage.getItem(`calendar-${dateKey}`) || 0);
+                total += count;
+                
+                if (count > bestDayCount) {
+                    bestDayCount = count;
+                    bestDayDate = date;
+                }
+            });
+            
+            // Calculate completion based on 10 commitments
+            const completionRate = Math.round((total / 10) * 100);
+            
+            // Show total as "X/10" (out of 10 commitments)
+            document.getElementById('monthlyTotal').textContent = total + '/10';
+            document.getElementById('monthlyRate').textContent = completionRate + '%';
+            
+            // Show best day as date (e.g., "Feb 16")
+            if (bestDayDate && bestDayCount > 0) {
+                const bestDayFormatted = bestDayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                document.getElementById('bestDay').textContent = bestDayFormatted;
+            } else {
+                document.getElementById('bestDay').textContent = '-';
+            }
+        }
+        
+        // Initialize calendar and sync today's count with checklist
+        updateTodayCalendarCount();
+        renderCalendar();
     </script>
+
 </body>
-</html> 
+</html>
